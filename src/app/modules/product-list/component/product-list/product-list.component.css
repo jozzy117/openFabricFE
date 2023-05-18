@@ -1,0 +1,18 @@
+::ng-deep .add-product-button {
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+::ng-deep .add-product-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.float_left {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}

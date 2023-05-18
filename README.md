@@ -1,7 +1,15 @@
 # OpenFabricShop
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.10.
+## Deployment steps
 
+For Heroku:
+Create a Heroku account and install the Heroku CLI.
+Create a new Heroku app using `heroku create`.
+Set the buildpack for the application using `heroku buildpacks:set heroku/nodejs`.
+Add and commit the files to your Git repository using `git add .` and `git commit -m "Initial commit"`.
+Push the application to Heroku using `git push heroku master`.
+Access your deployed application using the provided Heroku app URL.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

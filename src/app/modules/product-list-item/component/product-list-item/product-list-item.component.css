@@ -1,0 +1,37 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+mat-card {
+  width: 300px;
+  margin-bottom: var(--xc-spacing-4);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-details {
+  padding: var(--xc-spacing-4);
+}
+
+.product-name {
+  font-size: 2rem; /* Assumes 16px as the base font size */
+  margin-bottom: var(--xc-spacing-2);
+}
+
+.product-description {
+  margin-bottom: var(--xc-spacing-2);
+}
+
+.product-price {
+  font-weight: bold;
+}
+
+button {
+  margin-top: var(--xc-spacing-4);
+}

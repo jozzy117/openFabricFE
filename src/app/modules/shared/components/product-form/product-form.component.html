@@ -1,0 +1,38 @@
+<form [formGroup]="productForm">
+  <mat-form-field>
+    <input matInput formControlName="title" placeholder="Title">
+    <mat-error *ngIf="productForm.get('title')?.invalid">
+      Title is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="category" placeholder="Category">
+    <mat-error *ngIf="productForm.get('category')?.invalid">
+      Category is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput formControlName="description" placeholder="Description"></textarea>
+    <mat-error *ngIf="productForm.get('description')?.invalid">
+      Description is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="price" placeholder="Price">
+    <mat-error *ngIf="productForm.get('price')?.hasError('required')">Price is required.</mat-error>
+    <mat-error *ngIf="productForm.get('price')?.hasError('min')">Price must be a positive number.</mat-error>
+    <mat-error *ngIf="productForm.get('price')?.errors?.['pattern']">Please enter a valid price (numbers only).</mat-error>
+  </mat-form-field>
+
+  <button *ngIf="data?.mode !== 'view'" mat-raised-button [disabled]="!productForm.valid" color="primary" (click)="onSubmit()">Submit</button>
+  <button *ngIf="data?.mode === 'view' && isEditMode" mat-raised-button [disabled]="isEditMode && !productForm.valid" color="primary" (click)="onSubmit()">
+    Save
+  </button>
+  <button *ngIf="data?.mode === 'view' && !isEditMode" mat-raised-button [disabled]="isEditMode && !productForm.valid" color="primary" (click)="editMode()">
+    Edit
+  </button>
+  <button mat-button (click)="onCancel()">Cancel</button>
+</form>

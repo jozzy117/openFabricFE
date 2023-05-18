@@ -1,0 +1,17 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+textarea[matInput] {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  margin-top: 24px;
+}

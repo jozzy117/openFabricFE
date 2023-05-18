@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  /* font-size: calc(16px + 1vw); */
+  font-size: 62.5%;
+  /* Color styles */
+  --primary: #4E126C;
+  --primary-dark: #641873;
+  --primary-light: #9D46B1;
+  --secondary--blue: #008AD0;
+
+  /* Breakpoints */
+
+  --breakpoint-sm: 490px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1040px;
+  --breakpoint-xl: 1440px;
+
+  /* Spacings */
+  --xc-spacing-1: 4px;
+  --xc-spacing-2: 8px;
+  --xc-spacing-3: 12px;
+  --xc-spacing-4: 16px;
+  --xc-spacing-5: 20px;
+  --xc-spacing-6: 24px;
+  --xc-spacing-7: 32px;
+  --xc-spacing-8: 40px;
+  --xc-spacing-9: 48px;
+  --xc-spacing-10: 64px;
+  --xc-spacing-11: 88px;
+  --xc-spacing-12: 96px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--breakpoint-sm);
+  padding: var(--xc-spacing-4);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 490px) {
+  .container {
+    padding-left: var(--xc-spacing-6);
+    padding-right: var(--xc-spacing-6);
+    max-width: var(--breakpoint-md);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--xc-spacing-9);
+    padding-right: var(--xc-spacing-9);
+    max-width: var(--breakpoint-lg);
+  }
+}
+
+@media (min-width: 1040px) {
+  .container {
+    padding-left: var(--xc-spacing-12);
+    padding-right: var(--xc-spacing-12);
+    max-width: var(--breakpoint-xl);
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding-left: var(--xc-spacing-9);
+    padding-right: var(--xc-spacing-9);
+  }
+}
+
+@media (min-width: 1526px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+

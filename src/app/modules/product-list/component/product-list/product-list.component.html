@@ -1,0 +1,8 @@
+<ngx-spinner type="ball-clip-rotate"></ngx-spinner>
+<div class="float_left">
+  <button mat-raised-button color="primary" (click)="createProduct()">Add New Product</button>
+</div>
+<app-product-list-item 
+[products]="products"
+(viewEmit)="viewProduct($event)"
+></app-product-list-item>
